@@ -32,10 +32,15 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblusuarios = new javax.swing.JTable();
         btnNuevoUsuario = new javax.swing.JButton();
+        pnListMaterias = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblMaterias = new javax.swing.JTable();
+        btnNuevaMateria = new javax.swing.JButton();
         pn1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuUsuarios = new javax.swing.JMenu();
         btnListUsuarios = new javax.swing.JMenuItem();
+        btnListMaterias = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,7 +83,45 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnNuevoUsuario)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
+        );
+
+        tblMaterias.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(tblMaterias);
+
+        btnNuevaMateria.setText("Nueva Materia");
+
+        javax.swing.GroupLayout pnListMateriasLayout = new javax.swing.GroupLayout(pnListMaterias);
+        pnListMaterias.setLayout(pnListMateriasLayout);
+        pnListMateriasLayout.setHorizontalGroup(
+            pnListMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnListMateriasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnListMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 751, Short.MAX_VALUE)
+                    .addGroup(pnListMateriasLayout.createSequentialGroup()
+                        .addComponent(btnNuevaMateria)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnListMateriasLayout.setVerticalGroup(
+            pnListMateriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnListMateriasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnNuevaMateria)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pn1Layout = new javax.swing.GroupLayout(pn1);
@@ -93,6 +136,7 @@ public class Principal extends javax.swing.JFrame {
         );
 
         jLayeredPane1.setLayer(pnListusers, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(pnListMaterias, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane1.setLayer(pn1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
@@ -101,21 +145,28 @@ public class Principal extends javax.swing.JFrame {
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addComponent(pnListusers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 20, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnListMaterias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnListusers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnListMaterias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         mnuUsuarios.setText("Gestion de usuarios");
 
         btnListUsuarios.setText("Listar usuarios");
         mnuUsuarios.add(btnListUsuarios);
+
+        btnListMaterias.setText("Listar Materias");
+        mnuUsuarios.add(btnListMaterias);
 
         jMenuBar1.add(mnuUsuarios);
 
@@ -176,15 +227,20 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JMenuItem btnListMaterias;
     public javax.swing.JMenuItem btnListUsuarios;
+    public javax.swing.JButton btnNuevaMateria;
     public javax.swing.JButton btnNuevoUsuario;
     public javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JMenu mnuUsuarios;
     public javax.swing.JPanel pn1;
+    public javax.swing.JPanel pnListMaterias;
     public javax.swing.JPanel pnListusers;
+    public javax.swing.JTable tblMaterias;
     public javax.swing.JTable tblusuarios;
     // End of variables declaration//GEN-END:variables
 }

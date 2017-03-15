@@ -5,7 +5,7 @@
  */
 package Vistas;
 
-import Controllers.LoginController;
+import Controllers.PrincipalController;
 
 /**
  *
@@ -19,6 +19,6 @@ public class start {
         lg = GetLogin.getLogin();
         lg.setLocationRelativeTo(null);
         lg.setVisible(true);
-        LoginController lc = new LoginController();
+        PrincipalController lc = new PrincipalController();
     }
 }

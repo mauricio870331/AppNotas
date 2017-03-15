@@ -29,7 +29,7 @@ public class UsuariosDao {
         Usuarios u = null;
         try {
             sql = "select nombre, tipo_usuario from usuarios where usuario = ? and clave = ?";
-            pstm = cn.prepareCall(sql);
+            pstm = cn.prepareStatement(sql);
             pstm.setString(1, usuario);
             pstm.setString(2, pass);
             rs = pstm.executeQuery();
@@ -63,4 +63,24 @@ public class UsuariosDao {
         }
         return l;
     }
+
+    //Listar
+    public String guardarUsuario(Usuarios u) throws SQLException {
+        String msn = "Error Al Crear El Usuario";
+        try {
+            sql = "insert into usuarios values (?,?,?,?,?)";
+            pstm = cn.prepareStatement(sql);
+            pstm.setString(1, u.getId_Usuario());
+            pstm.setString(2, u.getNombre());
+            pstm.setString(3, u.getUsuario());
+            pstm.setString(4, u.getClave());
+            pstm.setInt(5, u.getTipo_usuario());
+            pstm.executeUpdate();
+            msn = "Usuario Creado Con Exito";
+        } catch (Exception e) {
+            System.out.println("error " + e);
+        }
+        return msn;
+    }
+
 }
