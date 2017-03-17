@@ -49,7 +49,7 @@ public class PrincipalController implements ActionListener {
     DefaultTableModel modelo;
     TiposUsuariosDao tiposUserDao;
     int tipoUserLog = 0;
-    ArrayList<Object>
+    ArrayList<String> list = new ArrayList();
     public PrincipalController() {
         lg = GetLogin.getLogin();
         pr = GetPrincipal.getPrincipal();
@@ -185,11 +185,7 @@ public class PrincipalController implements ActionListener {
         if (e.getSource() == am.seleccionar) {
             int fila = am.tblMaterias.getSelectedRow();
             if (fila >= 0) {
-                try {
-                    
-                } catch (SQLException ex) {
-                    System.out.println("error " + ex);
-                }
+                list.add(am.tblMaterias.getValueAt(fila, 0).toString()+","+am.documento.getText());
             } else {
                 JOptionPane.showMessageDialog(null, "¡Debes seleccionar un registro!");
             }
