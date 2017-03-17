@@ -16,6 +16,7 @@ public class Usuarios {
     private String usuario;
     private String clave;
     private int tipo_usuario;
+    
 
     public Usuarios(String id_Usuario, String nombre, String usuario, String clave, int tipo_usuario) {
         this.id_Usuario = id_Usuario;
